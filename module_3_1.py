@@ -13,7 +13,7 @@ def is_contains(string, list_to_search):
     count_calls()
     # Возвращаем True, если строка находится в этом списке, False - если отсутствует. Регистром строки при
     # проверке пренебречь: UrbaN ~ URBAN
-    return string.upper() in [s.upper() for s in list_to_search]
+    return any(string.upper() == s.upper() for s in list_to_search)
 
 print("Вывод на консоль:")
 print(string_info('Capybara'))
